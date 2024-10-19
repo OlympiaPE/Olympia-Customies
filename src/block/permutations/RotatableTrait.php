@@ -102,11 +102,11 @@ trait RotatableTrait {
 		return parent::place($tx, $item, $blockReplace, $blockClicked, $face, $clickVector, $player);
 	}
 
-	public function serializeState(BlockStateWriter $out): void {
-		$out->writeInt("customies:rotation", $this->facing);
+	public function serializeState(BlockStateWriter $blockStateOut): void {
+        $blockStateOut->writeInt("customies:rotation", $this->facing);
 	}
 
-	public function deserializeState(BlockStateReader $in): void {
-		$this->facing = $in->readInt("customies:rotation");
+	public function deserializeState(BlockStateReader $blockStateIn): void {
+		$this->facing = $blockStateIn->readInt("customies:rotation");
 	}
 }

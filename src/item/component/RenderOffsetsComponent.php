@@ -8,10 +8,10 @@ final class RenderOffsetsComponent implements ItemComponent {
 	private int $textureWidth;
 	private int $textureHeight;
 	private bool $handEquipped;
-    private int $firstPersonDivider;
-    private int $thirdPersonDivider;
+    private float $firstPersonDivider;
+    private float $thirdPersonDivider;
 
-	public function __construct(int $textureWidth, int $textureHeight, bool $handEquipped = false, int $firstPersonDivider = 1, int $thirdPersonDivider = 1) {
+	public function __construct(int $textureWidth, int $textureHeight, bool $handEquipped = false, float $firstPersonDivider = 1.0, float $thirdPersonDivider = 1.0) {
 		$this->textureWidth = $textureWidth;
 		$this->textureHeight = $textureHeight;
 		$this->handEquipped = $handEquipped;

@@ -120,9 +120,9 @@ trait ItemComponentsTrait {
 	 * and height of a texture to make the item scale correctly. An optional bool for hand equipped can be used if the
 	 * item is something like a tool or weapon.
 	 */
-	protected function setupRenderOffsets(int $width, int $height, bool $handEquipped = false, int $firstPersonDivider = 3, int $thirdPersonDivider = 1): void {
+	protected function setupRenderOffsets(int $width, int $height, bool $handEquipped = false, int $thirdPersonDivider = 1): void {
 		$this->addComponent(new HandEquippedComponent($handEquipped));
-		$this->addComponent(new RenderOffsetsComponent($width, $height, $handEquipped, $firstPersonDivider, $thirdPersonDivider));
+		$this->addComponent(new RenderOffsetsComponent($width, $height, $handEquipped, $width / 16, $thirdPersonDivider));
 	}
 
 	/**
